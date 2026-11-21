@@ -1,0 +1,24 @@
+PaceWise - Test Cases (run these yourselves and record YOUR actual result)
+Automated browser run on the redesigned version: 43/43 checks passed. Re-test by hand before the defense.
+
+No | Action                                          | Expected result                                          
+1  | Tasks > press Add with an empty box             | Message: "Please type a task name."
+2  | Type "ab" and add                               | Message: needs at least 3 characters
+3  | Add "Math set" twice                            | Second is rejected: already on your list
+4  | Add a task with a past due date                 | Message: due date already past
+5  | Add to Today on 4 tasks                         | 4th is blocked with a kind message (limit 3)
+6  | Add 2 steps, tick one                           | Bar shows 1/2, a "Finished step" win appears
+7  | Tick every step                                 | Task becomes done, "Finished task" win appears
+8  | Untick a step of a done task                    | Task reopens, task win is removed
+9  | Today: tick a task's checkbox                   | Stat tile and "x / y tasks" update
+10 | Settings: work minutes = 0                      | Error message, nothing saved
+11 | Start timer, Pause, Resume                      | Counts down, holds time when paused, circle shrinks
+12 | Let a focus round finish                        | Round saved, win added, break starts
+13 | Press Skip during focus                         | Goes to break, NO round is counted
+14 | Press Reset                                     | Back to full focus time
+15 | Pick a mood and save a note                     | Saved; face highlighted; still there after refresh
+16 | Refresh the page                                | Tasks, wins, mood, settings are still there
+17 | Backup > Clear > Restore                        | All data returns
+18 | Restore a non-backup file                       | Message: not a valid backup, data unchanged
+19 | Type <b>html</b> as a task name                 | Shown as plain text, not run
+20 | Open each screen at 360px wide                  | No sideways scrolling
